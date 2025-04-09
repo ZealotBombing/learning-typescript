@@ -9,3 +9,10 @@ function print(s) {
     console.log(s);
 }
 greetFernanda(print);
+function greetFernandaAgain(fn) {
+    fn("Hi, Fernanda");
+}
+function print2(s) {
+    return s.length;
+}
+greetFernandaAgain(print2);

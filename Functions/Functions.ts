@@ -12,3 +12,17 @@ function print(s : string){
 }
 
 greetFernanda(print)
+
+
+// we can use a type alias to name a function type
+type greetFunc = (a: string) => number
+
+function greetFernandaAgain(fn: greetFunc){
+    fn("Hi, Fernanda")
+}
+
+function print2(s: string){
+    return s.length
+}
+
+greetFernandaAgain(print2)
