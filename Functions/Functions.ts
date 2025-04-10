@@ -26,3 +26,25 @@ function print2(s: string){
 }
 
 greetFernandaAgain(print2)
+
+
+//this is something callable with property (I don't understand)
+
+type DescribableFunction = {
+    description: string;
+    (arg: number): boolean;
+}
+
+function doSomething(fn: DescribableFunction){ //so fn is a DescribableFunction
+
+    console.log(fn.description + " returned" + fn(6))  //and this is the function
+}
+
+function myFucn(arg: number){
+    return arg > 3;
+}
+
+myFucn.description = "default description" //so my function now has a new property
+
+
+doSomething(myFucn) //I think I get it
